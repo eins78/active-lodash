@@ -1,0 +1,61 @@
+{
+  "name": "active-lodash",
+  "version": "1.0.0",
+  "description": "A version of lodash customized to feel more like ActiveSupport (from Rails).",
+  "main": "dist/index.js",
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint src test",
+    "check": "npm run lint -s && dependency-check package.json --entry src",
+    "watch": "watch 'npm run build' src test",
+    "test": "babel-node test/*.js | tspec",
+    "prebuild": "npm run check -s && npm run clean -s",
+    "build": "babel --optional runtime src -d dist",
+    "postbuild": "npm run test -s",
+    "coverage": "babel-node node_modules/.bin/isparta cover test/*.js",
+    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
+    "postcoveralls": "rimraf ./coverage",
+    "prepublish": "npm run build -s",
+    "deploy": "git pull --rebase origin master && git push origin master",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags",
+    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com//active-lodash.git"
+  },
+  "keywords": [
+    "lodash",
+    "activesupport",
+    "rails"
+  ],
+  "author": "Max F. Albrecht <1@178.is>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com//active-lodash/issues"
+  },
+  "homepage": "https://github.com//active-lodash#readme",
+  "devDependencies": {
+    "eslint": "*",
+    "babel-eslint": "*",
+    "babel": "*",
+    "coveralls": "*",
+    "isparta": "*",
+    "tape": "*",
+    "tap-spec": "*",
+    "rimraf": "*",
+    "dependency-check": "*",
+    "watch": "*",
+    "doctoc": "*"
+  },
+  "dependencies": {
+    "babel-runtime": "*"
+  }
+}

@@ -1,21 +1,22 @@
 # active-lodash
 
-[![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
-[![Downloads][download-badge]][npm-url]
+<!-- [![NPM version][npm-image]][npm-url] -->
+<!-- [![Build Status][travis-image]][travis-url] -->
+<!-- [![Coveralls Status][coveralls-image]][coveralls-url] -->
+<!-- [![Dependency Status][depstat-image]][depstat-url] -->
+<!-- [![Downloads][download-badge]][npm-url] -->
 
-> A version of lodash customized to feel more like ActiveSupport (from Rails).
+> A version of lodash customized to feel more like Ruby/Rails/ActiveSupport.
 
 ## Features
 
 -   **non-destructive `merge`**, `assign`, `extend`, etc.  
     (They are always returning a new object)
 
--   **end a [chain][] with `.presence()`.**  
-    Works like `.value()`, but only returns it if there is one
-    according to `isEmpty`
+-   **end a [`chain`][] with `.presence()`.**   
+    Works like `.value()`, but only returns it if it is [`present`](#present)
+
+-   string tools from [lodash-inflection][]
 
 -   Does not extend prototypes.  
     (If you want that, have a look at [rodash][] or [activesupport][])
@@ -65,7 +66,7 @@ assert.equal(f.present(null), false)
 
 CC-0 © [Max F. Albrecht](http://github.com/eins78)
 
-[chain]: https://lodash.com/docs#chain
+[`chain`]: https://lodash.com/docs#chain
 
 [lodash-inflection]: https://www.npmjs.com/package/lodash-inflection
 [rodash]: https://github.com/obie/rodash
@@ -73,13 +74,13 @@ CC-0 © [Max F. Albrecht](http://github.com/eins78)
 [npm-url]: https://npmjs.org/package/active-lodash
 [npm-image]: https://img.shields.io/npm/v/active-lodash.svg?style=flat-square
 
-[travis-url]: https://travis-ci.org//active-lodash
-[travis-image]: https://img.shields.io/travis//active-lodash.svg?style=flat-square
+[travis-url]: https://travis-ci.org/eins78/active-lodash
+[travis-image]: https://img.shields.io/travis/eins78/active-lodash.svg?style=flat-square
 
-[coveralls-url]: https://coveralls.io/r//active-lodash
-[coveralls-image]: https://img.shields.io/coveralls//active-lodash.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/eins78/active-lodash
+[coveralls-image]: https://img.shields.io/coveralls/eins78/active-lodash.svg?style=flat-square
 
-[depstat-url]: https://david-dm.org//active-lodash
-[depstat-image]: https://david-dm.org//active-lodash.svg?style=flat-square
+[depstat-url]: https://david-dm.org/eins78/active-lodash
+[depstat-image]: https://david-dm.org/eins78/active-lodash.svg?style=flat-square
 
 [download-badge]: http://img.shields.io/npm/dm/active-lodash.svg?style=flat-square

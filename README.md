@@ -10,6 +10,8 @@
 
 ## Features
 
+-   custom, reduced, modern build of `lodash`
+
 -   **non-destructive `merge`**, `assign`, `extend`, etc.  
     (They are always returning a new object)
 

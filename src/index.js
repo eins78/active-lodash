@@ -1,9 +1,9 @@
-import f from 'lodash'
+import f from '../lodash.custom'
 import overrides from './overrides'
 import additions from './additions'
 
 export default (function () {
   f.mixin(overrides(f))
-  f.mixin(additions, {chain: false}) // returns value if chained
+  f.mixin(additions(f), {chain: false}) // returns value if chained
   return f
 }())

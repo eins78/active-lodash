@@ -8,16 +8,17 @@
     "vendor/"
   ],
   "scripts": {
-    "clean": "rimraf dist",
+    "dev": "npm run -s build && npm run -s test",
+    "clean": "rimraf dist lodash.custom.js",
     "lint": "eslint src test",
-    "check": "npm run -s lint && dependency-check package.json --entry src",
-    "watch": "watch 'npm run -s build' src test",
+    "watch": "watch 'npm run build -s' src test",
+    "watch-dev": "watch 'npm run dev -s' src test",
+    "check": "npm run -s lint",
     "test": "babel-node test/*.js | tspec",
-    "prebuild": "npm run check -s && npm run clean -s",
-    "build": "babel --optional runtime src -d dist",
+    "prebuild": "npm run -s check && npm run -s clean",
+    "build": "npm run -s build-lodash && babel --optional runtime src -d dist",
+    "build-lodash": "lodash modern strict exports=node    category=array,chain,collection,function,lang,object,number,string -d -o lodash.custom.js",
     "postbuild": "npm run test -s",
-    "prebuild": "npm run -s clean",
-    "build": "babel --optional runtime src -d dist",
     "coverage": "babel-node node_modules/.bin/istanbul cover test/*.js",
     "coveralls": "npm run -s coverage && coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage",
@@ -49,7 +50,7 @@
     "coveralls": "*",
     "dependency-check": "*",
     "eslint": "*",
-    "isparta": "*",
+    "istanbul": "*",
     "rimraf": "*",
     "tap-spec": "*",
     "tape": "*",
@@ -57,6 +58,7 @@
     "watch": "*"
   },
   "dependencies": {
-    "babel-runtime": "*"
+    "babel-runtime": "*",
+    "lodash-cli": "3.x.x"
   }
 }

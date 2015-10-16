@@ -8,24 +8,68 @@
 
 > A version of lodash customized to feel more like ActiveSupport (from Rails).
 
+## Features
+
+-   **non-destructive `merge`**, `assign`, `extend`, etc.  
+    (They are always returning a new object)
+
+-   **end a [chain][] with `.presence()`.**  
+    Works like `.value()`, but only returns it if there is one
+    according to `isEmpty`
+
+-   Does not extend prototypes.  
+    (If you want that, have a look at [rodash][] or [activesupport][])
+
+-   [**`<your idea here>`**](https://github.com/eins78/active-lodash/issues)
+
 ## Install
 
 ```sh
-npm i -D active-lodash
+npm i -D @eins78/active-lodash
 ```
 
 ## Usage
 
 ```js
-import activeLodash from "active-lodash"
-
-activeLodash() // true
+import f from '@eins78/active-lodash'
 ```
+
+or
+
+```js
+var f = require('@eins78/active-lodash')
+
+```
+
+then
+
+```js
+assert.equal((f(23).presence() || 42), 23)
+assert.equal((f(null).presence() || 42), 42)
+
+assert.equal(f.present({a: 1}), true)
+assert.equal(f.present([1]), true)
+assert.equal(f.present(true), true)
+assert.equal(f.present(false), true)
+assert.equal(f.present(function () {}), true)
+
+assert.equal(f.present({}), false)
+assert.equal(f.present([]), false)
+assert.equal(f.present(undefined), false)
+assert.equal(f.present(null), false)
+```
+
+(See tests for more Examples.)
 
 ## License
 
-MIT © [Max F. Albrecht](http://github.com/eins78)
+CC-0 © [Max F. Albrecht](http://github.com/eins78)
 
+[chain]: https://lodash.com/docs#chain
+
+[lodash-inflection]: https://www.npmjs.com/package/lodash-inflection
+[rodash]: https://github.com/obie/rodash
+[activesupport]: https://www.npmjs.com/package/activesupport
 [npm-url]: https://npmjs.org/package/active-lodash
 [npm-image]: https://img.shields.io/npm/v/active-lodash.svg?style=flat-square
 

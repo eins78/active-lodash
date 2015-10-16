@@ -18,7 +18,6 @@
     "prebuild": "npm run -s check && npm run -s clean",
     "build": "npm run -s build-lodash && babel --optional runtime src -d dist",
     "build-lodash": "lodash modern strict exports=node    category=array,chain,collection,function,lang,object,number,string -d -o lodash.custom.js",
-    "postbuild": "npm run test -s",
     "coverage": "babel-node node_modules/.bin/istanbul cover test/*.js",
     "coveralls": "npm run -s coverage && coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage",

@@ -1,0 +1,41 @@
+{
+  "jobs": {
+    "Test": {
+      "run-on": [
+        {
+          "type": "branch",
+          "include-match": "^.*$"
+        }
+      ],
+      "context": {
+        "tasks": {
+          "Unit tests and Coverage": {
+            "traits": {
+              "nodejs": true
+            },
+            "environment-variables": {
+              "NODE_ENV": "test"
+            },
+            "scripts": {
+              "npm_install": {
+                "body": "npm install --ignore-scripts"
+              },
+              "build": {
+                "body": "npm run -s build",
+                "run-when": "npm_install"
+              },
+              "tests": {
+                "body": "npm run -s test",
+                "run-when": "build"
+              },
+              "coverage": {
+                "body": "npm run -s coverage",
+                "run-when": "tests"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

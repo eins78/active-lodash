@@ -15,9 +15,7 @@
 -   **non-destructive `merge`**, `assign`, `extend`, etc.  
 (They are always returning a new object)
 
--   **[`present`](#present)**
-
--   string tools from [lodash-inflection][]
+-   **`present()`** and **`presence()`**
 
 -   Does not extend prototypes.  
 (If you want that, have a look at [rodash][] or [activesupport][])

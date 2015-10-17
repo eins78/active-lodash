@@ -16,6 +16,12 @@
             "environment-variables": {
               "NODE_ENV": "test"
             },
+            "tree-attachments": {
+              "coverage": {
+                "glob": "coverage/**",
+                "content-type": "text/plain"
+              }
+            },
             "scripts": {
               "test": {
                 "body": "npm run ci"

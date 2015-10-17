@@ -1,10 +1,11 @@
 # active-lodash
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Travis Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 <!-- [![Downloads][download-badge]][npm-url] -->
+[![CI Status][cider-image]][cider-url]
 
 > A version of lodash customized to feel more like Ruby/Rails/ActiveSupport.
 
@@ -73,6 +74,8 @@ CC-0 © [Max F. Albrecht](http://github.com/eins78)
 [npm-url]: https://npmjs.org/package/active-lodash
 [npm-image]: https://img.shields.io/npm/v/@eins78/active-lodash.svg?style=flat-square
 
+[cider-url]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/cider-ci/Test/summary.html
+[cider-image]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/cider-ci/Test/summary.svg?respond_width_200&orientation=horizontal
 [travis-url]: https://travis-ci.org/eins78/active-lodash
 [travis-image]: https://img.shields.io/travis/eins78/active-lodash.svg?style=flat-square
 

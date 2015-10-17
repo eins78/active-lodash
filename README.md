@@ -75,7 +75,7 @@ CC-0 © [Max F. Albrecht](http://github.com/eins78)
 [npm-image]: https://img.shields.io/npm/v/active-lodash.svg?style=flat-square
 
 [cider-url]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/cider-ci/Test/summary.html
-[cider-image]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/cider-ci/Test/summary.svg?respond_width_200&orientation=horizontal
+[cider-image]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/master/Test/summary.svg?respond_width_200&orientation=horizontal
 [travis-url]: https://travis-ci.org/eins78/active-lodash
 [travis-image]: https://img.shields.io/travis/eins78/active-lodash.svg?style=flat-square
 

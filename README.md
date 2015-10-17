@@ -71,7 +71,7 @@ CC-0 © [Max F. Albrecht](http://github.com/eins78)
 [activesupport]: https://www.npmjs.com/package/activesupport
 
 [npm-url]: https://npmjs.org/package/active-lodash
-[npm-image]: https://img.shields.io/npm/v/active-lodash.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/@eins78/active-lodash.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/eins78/active-lodash
 [travis-image]: https://img.shields.io/travis/eins78/active-lodash.svg?style=flat-square

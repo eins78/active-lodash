@@ -23,8 +23,20 @@
               }
             },
             "scripts": {
-              "test": {
-                "body": "npm run ci"
+              "npm_install": {
+                "body": "npm install --ignore-scripts"
+              },
+              "build": {
+                "body": "npm run -s build",
+                "run-when": "npm_install"
+              },
+              "tests": {
+                "body": "npm run -s test",
+                "run-when": "build"
+              },
+              "coverage": {
+                "body": "npm run -s coverage",
+                "run-when": "tests"
               }
             }
           }

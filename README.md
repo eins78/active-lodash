@@ -1,9 +1,9 @@
 # active-lodash
 
-<!-- [![NPM version][npm-image]][npm-url] -->
-<!-- [![Build Status][travis-image]][travis-url] -->
-<!-- [![Coveralls Status][coveralls-image]][coveralls-url] -->
-<!-- [![Dependency Status][depstat-image]][depstat-url] -->
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coveralls Status][coveralls-image]][coveralls-url]
+[![Dependency Status][depstat-image]][depstat-url]
 <!-- [![Downloads][download-badge]][npm-url] -->
 
 > A version of lodash customized to feel more like Ruby/Rails/ActiveSupport.

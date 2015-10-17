@@ -1,6 +1,5 @@
 {
   "name": "active-lodash",
-  "version": "1.0.1",
   "description": "A version of lodash customized to feel more like ActiveSupport (from Rails).",
   "main": "dist/index.js",
   "files": [
@@ -27,11 +26,12 @@
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
-    "postpublish": "git push origin master --follow-tags"
+    "postpublish": "git push origin master --follow-tags",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eins78/active-lodash.git"
+    "url": "https://github.com/eins78/active-lodash.git"
   },
   "keywords": [
     "lodash",
@@ -55,7 +55,8 @@
     "tap-spec": "*",
     "tape": "*",
     "tape-catch": "*",
-    "watch": "*"
+    "watch": "*",
+    "semantic-release": "^4.3.5"
   },
   "dependencies": {
     "babel-runtime": "*",

@@ -13,7 +13,8 @@
 
 -   custom, reduced, modern build of `lodash`
 
--   **non-destructive `merge`**, `assign`, `extend`, etc.  
+-   **non-destructive `merge`**, `assign`, `extend`,
+    `defaults` and `defaultsDeep`.  
 (They are always returning a new object)
 
 -   **`present()`** and **`presence()`**

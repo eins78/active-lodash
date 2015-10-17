@@ -17,6 +17,32 @@ test('activeLodash', (t) => {
     t.equal(f.assign, f.extend, 'it is aliased as `extend`')
   })
 
+  t.test('defaults', (t) => {
+    t.plan(2)
+
+    t.looseEqual(
+      f.defaults({a: 1}, {a: 3, b: 2}),
+      {a: 1, b: 2},
+      'it defaults')
+
+    let ding = {a: 1}
+    f.defaults(ding, {b: 2})
+    t.deepEqual(ding, {a: 1}, 'does not mutate the first argument')
+  })
+
+  t.test('defaultsDeep', (t) => {
+    t.plan(2)
+
+    t.looseEqual(
+      f.defaultsDeep({a: 1, b: {c: 2}}, {a: 4, b: {d: 3}}),
+      {a: 1, b: {c: 2, d: 3}},
+      'it defaults deep')
+
+    let ding = {a: 1}
+    f.defaultsDeep(ding, {b: 2})
+    t.deepEqual(ding, {a: 1}, 'does not mutate the first argument')
+  })
+
   t.test('merge', (t) => {
     t.plan(2)
 

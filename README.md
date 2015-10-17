@@ -13,15 +13,14 @@
 -   custom, reduced, modern build of `lodash`
 
 -   **non-destructive `merge`**, `assign`, `extend`, etc.  
-    (They are always returning a new object)
+(They are always returning a new object)
 
--   **end a [`chain`][] with `.presence()`.**   
-    Works like `.value()`, but only returns it if it is [`present`](#present)
+-   **[`present`](#present)**
 
 -   string tools from [lodash-inflection][]
 
 -   Does not extend prototypes.  
-    (If you want that, have a look at [rodash][] or [activesupport][])
+(If you want that, have a look at [rodash][] or [activesupport][])
 
 -   [**`<your idea here>`**](https://github.com/eins78/active-lodash/issues)
 
@@ -62,17 +61,17 @@ assert.equal(f.present(undefined), false)
 assert.equal(f.present(null), false)
 ```
 
-(See tests for more Examples.)
+(See [tests][] for more Examples.)
 
 ## License
 
 CC-0 © [Max F. Albrecht](http://github.com/eins78)
 
-[`chain`]: https://lodash.com/docs#chain
-
+[tests]: https://github.com/eins78/active-lodash/blob/master/test/tests.js
 [lodash-inflection]: https://www.npmjs.com/package/lodash-inflection
 [rodash]: https://github.com/obie/rodash
 [activesupport]: https://www.npmjs.com/package/activesupport
+
 [npm-url]: https://npmjs.org/package/active-lodash
 [npm-image]: https://img.shields.io/npm/v/active-lodash.svg?style=flat-square
 

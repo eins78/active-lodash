@@ -41,10 +41,28 @@ test('activeLodash', (t) => {
   })
 
   t.test('presence', (assert) => {
-    assert.plan(2)
+    assert.plan(4)
 
     assert.equal((f(23).presence() || 42), 23)
     assert.equal((f(null).presence() || 42), 42)
+
+    const firstNumber = (val) => {
+      return f.chain(val)
+        .filter(f.isNumber)
+        .first()
+    }
+
+    assert.equal(
+      (firstNumber(['A',23,'Z'])
+        .presence()
+        .run() || 42),
+      23)
+
+    assert.equal(
+      (firstNumber(['A','B','C'])
+        .presence()
+        .run() || 42),
+      42)
   })
 
   t.test('present', (assert) => {

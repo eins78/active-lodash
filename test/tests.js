@@ -79,4 +79,27 @@ test('activeLodash', (t) => {
     assert.equal(f.present(undefined), false)
     assert.equal(f.present(null), false)
   })
+  t.test('(lib)', (t) => {
+    t.plan(1)
+
+    t.test('callWithNewObject', (t)=> {
+      t.plan(5)
+
+      const factory = require('../dist/lib/callWithNewObject')
+
+      const fake = (arg1, arg2, arg3, arg4) => {
+        t.deepEqual(arg1, {}, 'calls with new object')
+        t.equal(arg2, 1, 'calls with 1. arg as 2.')
+        t.equal(arg3, 2, 'calls with 2. arg as 3.')
+        t.equal(arg4, 3, 'calls with 3. arg as 4.')
+      }
+
+      // do it
+      factory(fake)(1, 2, 3)
+
+      // just for "coverage" of generated code :/
+      t.ok(factory((() => { return true }), null)(),
+        'call with 2 args')
+    })
+  })
 })

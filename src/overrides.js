@@ -1,18 +1,15 @@
+import callWithNewObject from './lib/callWithNewObject'
+
 export default (f) => {
   const _merge = f.merge
   const _extend = f.extend
 
-  const merge = (...args) => {
-    return _merge(Object.create(null), ...args)
-  }
-
-  const extend = (...args) => {
-    return _extend(Object.create(null), ...args)
-  }
+  // define here because it is aliased
+  const extend = callWithNewObject(_extend)
 
   return {
-    merge: merge,
+    assign: extend,
     extend: extend,
-    assign: extend
+    merge: callWithNewObject(_merge)
   }
 }

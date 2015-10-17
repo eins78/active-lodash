@@ -13,7 +13,11 @@ export default (f) => {
     )
   }
 
-  const presence = (val) => { if (present(val)) return f(val).value() }
+  const presence = (val) => {
+    if (present(val)) {
+      return val
+    }
+  }
 
   return {
     present: present,

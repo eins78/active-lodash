@@ -1,0 +1,29 @@
+{
+  "jobs": {
+    "Test": {
+      "run-on": [
+        {
+          "type": "branch",
+          "include-match": "^.*$"
+        }
+      ],
+      "context": {
+        "tasks": {
+          "Unit tests and Coverage": {
+            "traits": {
+              "nodejs": true
+            },
+            "environment-variables": {
+              "NODE_ENV": "test"
+            },
+            "scripts": {
+              "test": {
+                "body": "npm run ci"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

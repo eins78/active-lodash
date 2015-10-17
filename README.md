@@ -26,19 +26,19 @@
 ## Install
 
 ```sh
-npm i -D @eins78/active-lodash
+npm i -SE active-lodash
 ```
 
 ## Usage
 
 ```js
-import f from '@eins78/active-lodash'
+import f from 'active-lodash'
 ```
 
 or
 
 ```js
-var f = require('@eins78/active-lodash')
+var f = require('active-lodash')
 
 ```
 
@@ -72,7 +72,7 @@ CC-0 © [Max F. Albrecht](http://github.com/eins78)
 [activesupport]: https://www.npmjs.com/package/activesupport
 
 [npm-url]: https://npmjs.org/package/active-lodash
-[npm-image]: https://img.shields.io/npm/v/@eins78/active-lodash.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/active-lodash.svg?style=flat-square
 
 [cider-url]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/cider-ci/Test/summary.html
 [cider-image]: http://ci.zhdk.ch/cider-ci/ui/public/active-lodash/cider-ci/Test/summary.svg?respond_width_200&orientation=horizontal

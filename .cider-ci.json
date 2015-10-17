@@ -16,9 +16,37 @@
             "environment-variables": {
               "NODE_ENV": "test"
             },
+            "tree-attachments": {
+              "coverage-lcov": {
+                "glob": "coverage/lcov.info",
+                "content-type": "text/plain"
+              },
+              "coverage-json": {
+                "glob": "coverage/coverage.json",
+                "content-type": "application/json"
+              }
+            },
+            "trial-attachments": {
+              "tap": {
+                "glob": "tap.log",
+                "content-type": "text/plain"
+              }
+            },
             "scripts": {
-              "test": {
-                "body": "npm run ci"
+              "npm_install": {
+                "body": "npm install --ignore-scripts"
+              },
+              "build": {
+                "body": "npm run -s build",
+                "start-when": [{ "script": "npm_install"}]
+              },
+              "tests": {
+                "body": "npm run -s test",
+                "start-when": [{ "script": "build"}]
+              },
+              "coverage": {
+                "body": "npm run -s coverage",
+                "start-when": [{ "script": "tests"}]
               }
             }
           }

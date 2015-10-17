@@ -28,15 +28,15 @@
               },
               "build": {
                 "body": "npm run -s build",
-                "run-when": "npm_install"
+                "start-when": [{ "script": "npm_install"}]
               },
               "tests": {
                 "body": "npm run -s test",
-                "run-when": "build"
+                "start-when": [{ "script": "build"}]
               },
               "coverage": {
                 "body": "npm run -s coverage",
-                "run-when": "tests"
+                "start-when": [{ "script": "tests"}]
               }
             }
           }

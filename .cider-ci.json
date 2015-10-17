@@ -24,6 +24,10 @@
               "coverage-json": {
                 "glob": "coverage/coverage.json",
                 "content-type": "application/json"
+              },
+              "coverage-html": {
+                "glob": "coverage/coverage.html",
+                "content-type": "text/html"
               }
             },
             "trial-attachments": {

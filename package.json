@@ -17,7 +17,8 @@
     "prebuild": "npm run -s check && npm run -s clean",
     "build": "npm run -s build-lodash && babel --optional runtime src -d dist",
     "build-lodash": "lodash modern strict exports=node    category=array,chain,collection,function,lang,object,number,string -d -o lodash.custom.js",
-    "coverage": "babel-node node_modules/.bin/istanbul cover test/*.js",
+    "coverage": "babel-node node_modules/.bin/istanbul cover test/*.js && npm run -s coverage-report",
+    "coverage-report": "html-inline -b coverage/lcov-report -i coverage/lcov-report/index.html > coverage/coverage.html",
     "coveralls": "npm run -s coverage && coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage",
     "ci": "npm install --ignore-scripts && npm run -s build && npm run -s test && npm run -s coverage",
@@ -44,22 +45,24 @@
     "url": "https://github.com/eins78/active-lodash/issues"
   },
   "homepage": "https://github.com/eins78/active-lodash#readme",
+  "dependencies": {
+    "babel-runtime": "*"
+  },
   "devDependencies": {
     "babel": "*",
     "babel-eslint": "*",
     "coveralls": "*",
     "dependency-check": "*",
     "eslint": "*",
+    "html-inline": "*",
     "istanbul": "*",
     "rimraf": "*",
+    "semantic-release": "4.x.x",
     "tap-spec": "*",
     "tape": "*",
     "tape-catch": "*",
     "watch": "*",
-    "semantic-release": "^4.3.5"
-  },
-  "dependencies": {
-    "babel-runtime": "*",
     "lodash-cli": "3.x.x"
-  }
+  },
+  "engines": {"nodejs": "> 0.10"}
 }

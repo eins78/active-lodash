@@ -1,6 +1,6 @@
 {
   "name": "active-lodash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A version of lodash customized to feel more like ActiveSupport (from Rails).",
   "main": "dist/index.js",
   "files": [

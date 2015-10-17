@@ -17,8 +17,18 @@
               "NODE_ENV": "test"
             },
             "tree-attachments": {
-              "coverage": {
-                "glob": "coverage/**",
+              "coverage-lcov": {
+                "glob": "coverage/lcov.info",
+                "content-type": "text/plain"
+              },
+              "coverage-json": {
+                "glob": "coverage/coverage.json",
+                "content-type": "application/json"
+              }
+            },
+            "trial-attachments": {
+              "tap": {
+                "glob": "tap.log",
                 "content-type": "text/plain"
               }
             },

@@ -13,9 +13,9 @@ before_install:
 before_script:
   - npm prune
 after_script:
-  - npm run -s coveralls
+  - npm run coveralls
 after_success:
-  - npm run -s semantic-release
+  - npm run semantic-release
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"

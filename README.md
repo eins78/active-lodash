@@ -87,3 +87,6 @@ CC-0 © [Max F. Albrecht](http://github.com/eins78)
 [depstat-image]: https://david-dm.org/eins78/active-lodash.svg?style=flat-square
 
 [download-badge]: http://img.shields.io/npm/dm/active-lodash.svg?style=flat-square
+
+
+(test commit for cider-ci)

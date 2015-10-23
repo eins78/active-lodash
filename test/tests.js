@@ -10,9 +10,9 @@ test('activeLodash', (t) => {
       {a: 1, b: 2, c: undefined},
       'it assigns')
 
-    let ding = {a: 1}
-    f.merge(ding, {b: 2})
-    t.deepEqual(ding, {a: 1}, 'does not mutate the first argument')
+    let ding = {x: 8}
+    f.assign(ding, {y: 9})
+    t.deepEqual(ding, {x: 8}, 'does not mutate the first argument')
 
     t.equal(f.assign, f.extend, 'it is aliased as `extend`')
   })
@@ -25,9 +25,9 @@ test('activeLodash', (t) => {
       {a: 1, b: 2},
       'it defaults')
 
-    let ding = {a: 1}
+    let ding = {k: 6}
     f.defaults(ding, {b: 2})
-    t.deepEqual(ding, {a: 1}, 'does not mutate the first argument')
+    t.deepEqual(ding, {k: 6}, 'does not mutate the first argument')
   })
 
   t.test('defaultsDeep', (t) => {
@@ -38,9 +38,9 @@ test('activeLodash', (t) => {
       {a: 1, b: {c: 2, d: 3}},
       'it defaults deep')
 
-    let ding = {a: 1}
+    let ding = {r: 5}
     f.defaultsDeep(ding, {b: 2})
-    t.deepEqual(ding, {a: 1}, 'does not mutate the first argument')
+    t.deepEqual(ding, {r: 5}, 'does not mutate the first argument')
   })
 
   t.test('merge', (t) => {
@@ -61,9 +61,9 @@ test('activeLodash', (t) => {
 
       'it merges')
 
-    let o = {a: 1}
+    let o = {s: 3}
     f.merge(o, {b: 2})
-    t.deepEqual(o, {a: 1}, 'does not mutate the arguments')
+    t.deepEqual(o, {s: 3}, 'does not mutate the arguments')
   })
 
   t.test('presence', (assert) => {

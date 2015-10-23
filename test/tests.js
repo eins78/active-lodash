@@ -44,7 +44,7 @@ test('activeLodash', (t) => {
   })
 
   t.test('merge', (t) => {
-    t.plan(2)
+    t.plan(3)
 
     t.looseEqual(
       f.merge(
@@ -64,6 +64,9 @@ test('activeLodash', (t) => {
     let o = {s: 3}
     f.merge(o, {b: 2})
     t.deepEqual(o, {s: 3}, 'does not mutate the arguments')
+
+    // test for stupidity – makes sure it works more than 1 time 😕
+    t.deepEqual(f.merge({b: 2}, {c: 3}), {b: 2, c: 3}, 'does bind correctly')
   })
 
   t.test('presence', (assert) => {

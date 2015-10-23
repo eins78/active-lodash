@@ -1,3 +1,5 @@
-export default (fun, ...args) => {
-  return fun.bind(undefined, Object.create(null), ...args)
+export default (func) => {
+  return function () {
+    return func.bind(undefined, Object.create(null)).apply(undefined, arguments)
+  }
 }

@@ -58,7 +58,7 @@
     "semantic-release": "^4.3.5"
   },
   "dependencies": {
-    "babel-runtime": "*",
+    "babel-runtime": "6.0.2",
     "lodash-cli": "3.x.x"
   }
 }

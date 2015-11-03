@@ -59,6 +59,6 @@
   },
   "dependencies": {
     "babel-runtime": "*",
-    "lodash-cli": "3.x.x"
+    "lodash-cli": "3.10.1"
   }
 }

@@ -46,7 +46,7 @@
   "devDependencies": {
     "babel": "*",
     "babel-eslint": "*",
-    "coveralls": "*",
+    "coveralls": "2.11.4",
     "dependency-check": "*",
     "eslint": "*",
     "istanbul": "*",

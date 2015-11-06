@@ -48,7 +48,7 @@
     "babel-eslint": "*",
     "coveralls": "*",
     "dependency-check": "*",
-    "eslint": "*",
+    "eslint": "1.9.0",
     "istanbul": "*",
     "rimraf": "*",
     "tap-spec": "*",

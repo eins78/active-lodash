@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/eins78/active-lodash#readme",
   "devDependencies": {
-    "babel": "^5.8.34",
+    "babel": "^6.3.26",
     "babel-eslint": "^4.1.5",
     "coveralls": "^2.11.4",
     "dependency-check": "^2.5.1",

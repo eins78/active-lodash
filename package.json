@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/eins78/active-lodash#readme",
   "devDependencies": {
-    "babel": "^5.8.34",
+    "babel": "^6.3.26",
     "babel-eslint": "^4.1.5",
     "coveralls": "^2.11.8",
     "dependency-check": "^2.5.1",
@@ -55,10 +55,10 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1",
     "tape-catch": "^1.0.4",
-    "watch": "^0.16.0"
+    "watch": "^0.17.1"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.34",
-    "lodash-cli": "3.x.x"
+    "babel-runtime": "^6.3.19",
+    "lodash-cli": "4.1.0"
   }
 }

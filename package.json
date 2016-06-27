@@ -58,7 +58,7 @@
     "watch": "*"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.34",
+    "babel-runtime": "^6.5.0",
     "lodash-cli": "3.x.x"
   }
 }
